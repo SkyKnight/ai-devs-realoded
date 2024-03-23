@@ -21,6 +21,11 @@ public sealed class TaskSession<TContent, TAnswer>
         return await _taskService.GetTaskContent<TContent>(_token, cancellationToken);
     }
 
+    public async Task<TContent> PostTaskContent(IReadOnlyDictionary<string, string> content, CancellationToken cancellationToken = default)
+    {
+        return await _taskService.PostTaskContent<TContent>(_token, content, cancellationToken);
+    }
+
     public async Task SendAnswer(TAnswer answer, CancellationToken cancellationToken = default)
     {
         await _taskService.SendAnswer(_token, answer, cancellationToken);

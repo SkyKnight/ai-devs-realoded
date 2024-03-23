@@ -1,5 +1,5 @@
 ﻿using AiDevReloaded.Core.AiTasks;
-using AiDevReloaded.Core.OpenAI.Moderation;
+using AiDevReloaded.Core.Services;
 
 namespace AiDevReloaded.Tests._04_Blogger;
 

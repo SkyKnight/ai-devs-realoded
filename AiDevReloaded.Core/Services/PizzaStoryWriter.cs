@@ -2,7 +2,7 @@
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Newtonsoft.Json.Linq;
 
-namespace AiDevReloaded.Tests._04_Blogger;
+namespace AiDevReloaded.Core.Services;
 
 public sealed class PizzaStoryWriter
 {

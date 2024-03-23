@@ -26,6 +26,16 @@ public sealed class TaskService
         return response;
     }
 
+    public async Task<T> PostTaskContent<T>(string token, IReadOnlyDictionary<string, string> content, CancellationToken cancellationToken = default) where T : ApiResponse, new()
+    {
+        var response = await (TASK_API_URL + "task/" + token)
+            .PostMultipartAsync(cnt => content.ToList().ForEach(x => cnt.AddString(x.Key, x.Value)), cancellationToken: cancellationToken)
+            .ReceiveJson<T>();
+
+        CheckResponse(response);
+        return response;
+    }
+
     public async Task SendAnswer<T>(string token, T answer, CancellationToken cancellationToken = default)
     {
         var response = await (TASK_API_URL + "answer/" + token)
