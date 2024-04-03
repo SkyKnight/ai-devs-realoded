@@ -38,9 +38,18 @@ public sealed class TaskService
 
     public async Task SendAnswer<T>(string token, T answer, CancellationToken cancellationToken = default)
     {
-        var response = await (TASK_API_URL + "answer/" + token)
+        AnswerResponse response;
+        try
+        {
+            response = await (TASK_API_URL + "answer/" + token)
             .PostJsonAsync(new { answer })
             .ReceiveJson<AnswerResponse>();
+        }
+        catch (FlurlHttpException ex)
+        {
+            var error = await ex.GetResponseStringAsync();
+            throw new Exception($"Error: {ex.Message}. {error}.", ex);
+        }
 
         CheckResponse(response);
     }
