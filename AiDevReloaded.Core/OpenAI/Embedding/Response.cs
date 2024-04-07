@@ -27,7 +27,7 @@ public class DataItem
     public int Index { get; set; }
 
     [JsonProperty("embedding")]
-    public List<double> Embedding { get; set; }
+    public List<float> Embedding { get; set; }
 }
 
 public class Usage

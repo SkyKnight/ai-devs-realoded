@@ -28,6 +28,9 @@
     <None Update="C02L05_functions\functions.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="C03L04_search\archiwum_aidevs.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

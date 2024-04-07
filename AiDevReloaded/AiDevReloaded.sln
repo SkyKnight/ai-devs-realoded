@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiDevReloaded.Tests", "..\AiDevReloaded.Tests\AiDevReloaded.Tests.csproj", "{E84AA74A-35EA-4439-A26F-ED40512A04B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AiDevReloaded.Tests", "..\AiDevReloaded.Tests\AiDevReloaded.Tests.csproj", "{E84AA74A-35EA-4439-A26F-ED40512A04B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiDevReloaded.Core", "..\AiDevReloaded.Core\AiDevReloaded.Core.csproj", "{DC65C705-AB5E-4050-AF55-EF9CE599B17E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AiDevReloaded.Core", "..\AiDevReloaded.Core\AiDevReloaded.Core.csproj", "{DC65C705-AB5E-4050-AF55-EF9CE599B17E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{A86F7C85-0AE8-483A-A9D6-58412610FC78}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\Docker\docker-compose.yml = ..\Docker\docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
