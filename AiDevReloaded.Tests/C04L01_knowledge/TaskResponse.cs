@@ -1,6 +1,6 @@
 using AiDevReloaded.Core.AiTasks;
 
-namespace AiDevReloaded.Tests.C004L01_knowledge;
+namespace AiDevReloaded.Tests.C04L01_knowledge;
 
 public sealed class TaskResponse : ApiResponse
 {
